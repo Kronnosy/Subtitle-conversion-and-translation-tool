@@ -39,5 +39,3 @@ pip install console-menu tqdm requests
 <p>6. Go to settings and enter your DeepL Api</p>
 
 <p>7. And that's it you can adjust the rest as you like.</p>
-
-<h2>🍰 Contribution Guidelines:</h2>
