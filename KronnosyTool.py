@@ -95,9 +95,9 @@ def translate_srt_file(input_file, output_file):
         for future in as_completed(futures):
             translated_subtitles.append(future.result())
             pbar.update(1)
-            time.sleep(0.1)  # Add a delay to update the progress bar
+            time.sleep(0.1) 
 
-    translated_subtitles.sort(key=lambda x: translate_time_to_seconds(x.split("\n")[0]))  # Sort by timecode
+    translated_subtitles.sort(key=lambda x: translate_time_to_seconds(x.split("\n")[0]))  
 
     with open(output_file, 'w', encoding='utf-8') as file:
         file.write('\n\n'.join(translated_subtitles))
@@ -117,7 +117,6 @@ def translate_srt_handler():
     translate_srt_file(input_srt_file, output_srt_file)
 
 def main_menu():
-    # Create the root menu
     menu = ConsoleMenu("Subtitle conversion and translation tool",
                        '''
             _   __
@@ -130,31 +129,24 @@ def main_menu():
                                                   |___/
                        ''')
 
-    # Create menu items for ass_to_srt and translate_srt functions
     ass_to_srt_item = FunctionItem("Convert .ass to .srt", ass_to_srt_handler)
     translate_srt_item = FunctionItem("Translate SRT", translate_srt_handler)
 
-    # Add items to the root menu
     menu.append_item(ass_to_srt_item)
     menu.append_item(translate_srt_item)
 
-    # Ayarlar alt menüsü
     settings_menu = ConsoleMenu("Settings", "API key and target language settings")
 
-    # Ayarlar menü öğeleri
     save_api_key_item = FunctionItem("Register API Key", save_api_key)
     set_target_language_item = FunctionItem("Set Target Language", set_target_language)
     show_settings_item = FunctionItem("Show Current Settings", show_current_settings)
 
-    # Ayarlar menüsüne öğeleri ekle
     settings_menu.append_item(save_api_key_item)
     settings_menu.append_item(set_target_language_item)
     settings_menu.append_item(show_settings_item)
-
-    # Ana menüye Ayarlar menüsünü ekle
+    
     menu.append_item(SubmenuItem("Settings", settings_menu, menu=menu))
 
-    # Show the menu
     menu.show()
 
 if __name__ == "__main__":
