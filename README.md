@@ -4,7 +4,7 @@
 
 <h2>Project Screenshots:</h2>
 
-<img src="https://cdn.discordapp.com/attachments/1169292217442123856/1188052381431246908/image.png?ex=65991f00&amp;is=6586aa00&amp;hm=592f550f591945c1dcfba354169025d6ceb97b898c5663e573e864fea8c2a97a&amp;" alt="project-screenshot" width="400" height="400/">
+<img src="https://cdn.discordapp.com/attachments/1169292217442123856/1188052381431246908/image.png?ex=65991f00&amp;is=6586aa00&amp;hm=592f550f591945c1dcfba354169025d6ceb97b898c5663e573e864fea8c2a97a&amp;" alt="project-screenshot" width="800" height="600/">
 
   
   
@@ -39,3 +39,5 @@ pip install console-menu tqdm requests
 <p>6. Go to settings and enter your DeepL Api</p>
 
 <p>7. And that's it you can adjust the rest as you like.</p>
+
+<h2>🍰 Contribution Guidelines:</h2>
